@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Твой Агент</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="static/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="static/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="static/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="static/css/style.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="/" class="scrollto">Reve<span>al</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="/">Главная</a></li>
+          <li><a href="/osago">ОСАГО</a></li>
+          <li><a href="/kasko">КАСКО</a></li>
+          <li><a href="/house">Квартира</a></li>
+          <li><a href="/dom">Дом</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+  {{if .Message}}
+    <div class="message" id="message">
+        {{.Message}}
+    </div>
+    <script src="/static/js/response.js"></script>
+    {{end}}
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+
+    <div class="intro-content">
+      <h2>Страхование <span>онлайн</span><br>просто и выгодно!</h2>
+      <div>
+        <a href="https://wa.me/79137744455" class="btn-get-started scrollto">Whatsapp</a>
+        <a href="#portfolio" class="btn-projects scrollto">Telegram</a>
+      </div>
+    </div>
+
+    <div id="intro-carousel" class="owl-carousel" >
+      <div class="item" style="background-image: url('static/img/intro-carousel/1.jpg');"></div>
+      <div class="item" style="background-image: url('static/img/intro-carousel/2.jpg');"></div>
+      <div class="item" style="background-image: url('static/img/intro-carousel/3.jpg');"></div>
+      <div class="item" style="background-image: url('static/img/intro-carousel/4.jpg');"></div>
+      <div class="item" style="background-image: url('static/img/intro-carousel/5.jpg');"></div>
+    </div>
+
+  </section><!-- #intro -->
+
+  <main id="main">
+
+    <!--==========================
+      About Section
+    ============================-->
+    <section id="about" class="wow fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 about-img">
+            <img src="img/about-img.jpg" alt="">
+          </div>
+
+          <div class="col-lg-6 content">
+            <h2>Надежное страхование в Новосибирске уже 26 лет.</h2>
+            <h3>Выбирайте страхование легко и удобно! Наша команда уже 26 лет помогает жителям Новосибирска находить оптимальные страховые решения.</h3>
+            <h3>Мы сотрудничаем с надежными страховыми компаниями, такими как Ресо-Гарантия и АльфаСтрахование, что позволяет нам предлагать самые выгодные условия. </h3>
+            <h3>Оформите страховку онлайн или обратитесь к нашим специалистам за консультацией. Мы подберем для вас индивидуальную программу, которая полностью соответствует вашим потребностям. </h3>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #about -->
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Услуги</h2>
+          <p>         </p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInLeft">
+              <div class="icon"><i class="fa fa-bar-chart"></i></div>
+              <h4 class="title"><a href="">ОСАГО</a></h4>
+              <p class="description">Обязательное страхование гражданской ответственности владельцев транспортных средств</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight">
+              <div class="icon"><i class="fa fa-picture-o"></i></div>
+              <h4 class="title"><a href="">КАСКО</a></h4>
+              <p class="description">Добровольное страхование транспортных средств от ущерба, хищения или угона</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInLeft" data-wow-delay="0.2s">
+              <div class="icon"><i class="fa fa-shopping-bag"></i></div>
+              <h4 class="title"><a href="">Квартира</a></h4>
+              <p class="description"> Защита квартиры от затопления, пожара, грабежа и вашей ответственности перед соседями</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight" data-wow-delay="0.2s">
+              <div class="icon"><i class="fa fa-map"></i></div>
+              <h4 class="title"><a href="">Дом</a></h4>
+              <p class="description">Защита имущества за городом: коттедж, его внутренняя отделка, движимое имущество, ландшафтные сооружения</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #services -->
+
+    <section id="call-to-action" class="wow fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">Страхование Онлайн. Как это работает?</h3>
+            <p class="cta-text"> Больше не нужно ездить в страховую компанию и тратить время на дорогу: сегодня вы можете оформить страхование онлайн, не выходя на улицу. Электронный страховой полис имеет ту же юридическую силу, что и бумажный, и обладает теми же преимуществами.</p>
+        </div>
+      </div>
+    </section><!-- #call-to-action -->
+
+
+        <!-- #contact -->
+
+
+        <section class="u-align-center u-clearfix u-white u-section-4" id="sec-0b10">
+          <div class="u-clearfix u-sheet u-sheet-1">
+            <h3 class="u-text u-text-default u-text-1">Свяжитесь с нами</h3>
+            <div class="u-form u-form-1">
+              <form
+                    id="contactForm"
+                    action="/contact"
+                    method="POST"
+                    class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
+                    style="padding: 10px"
+                    source="email"
+                    name="form"
+                >
+                <div class="u-form-group u-form-name u-label-none">
+                  <label for="name-3b9a" class="u-label">Имя</label>
+                  <input type="text" placeholder="Ваше имя" id="name-3b9a" name="name" class="u-input u-input-rectangle" required="">
+                </div>
+                <div class="u-form-email u-form-group u-label-none">
+                  <label for="email-3b9a" class="u-label">Email</label>
+                  <input type="email" placeholder="Почта для связи" id="email-3b9a" name="email" class="u-input u-input-rectangle" required="">
+                </div>
+                <div class="u-form-group u-form-select u-label-none u-form-group-3">
+                  <label for="select-a9e2" class="u-label">Услуги</label>
+                  <div class="u-form-select-wrapper">
+                    <select id="select-a9e2" name="selectOption" class="u-input u-input-rectangle">
+                      <option value="OSAGO" data-calc="OSAGO">ОСАГО</option>
+                      <option value="KASKO" data-calc="KASKO">КАСКО</option>
+                      <option data-calc="HOUSE" value="HOUSE">Квартира</option>
+                      <option data-calc="DOM" value="DOM">Дом, дача</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="u-form-group u-form-message u-label-none">
+                  <label for="message-3b9a" class="u-label">Message</label>
+                  <textarea placeholder="Вопросы или предложения (не обязательно)" rows="4" cols="50" id="message-3b9a" name="message" class="u-input u-input-rectangle" required=""></textarea>
+                </div>
+                <div class="u-align-left u-form-group u-form-submit">
+                  <button type="submit" class="u-btn u-btn-submit u-button-style u-custom-color-1 u-btn-1">Отправить</button>
+                </div>
+                <div id="successMessage" class="u-form-send-message u-form-send-success" style="display: none;">Спасибо! Ваше сообщение отправлено.</div>
+                <div id="errorMessage" class="u-form-send-error u-form-send-message" style="display: none;">Не удалось отправить сообщение. Пожалуйста, исправьте ошибки и попробуйте снова.</div>
+                <input type="hidden" value="" name="recaptchaResponse">
+                <input type="hidden" name="formServices" value="12d36e09-9e44-4f02-6891-f92ad772961e">
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Где нас найти?</h2>
+          <p></p>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="ion-ios-location-outline"></i>
+              <h3>Адрес</h3>
+              <address>Кольцово</address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="ion-ios-telephone-outline"></i>
+              <h3>Телефон</h3>
+              <p><a href="tel:+155895548855">+7 (913) 77 444 55</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="ion-ios-email-outline"></i>
+              <h3>Почта</h3>
+              <p><a href="mailto:info@example.com">aksenov100@yandex.ru</a></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+
+
+
+  <!--==========================
+    Footer
+  ============================-->
+
+  <!-- JavaScript Libraries -->
+  <script src="static/lib/jquery/jquery.min.js"></script>
+  <script src="static/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="static/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lstatic/ib/easing/easing.min.js"></script>
+  <script src="static/lib/superfish/hoverIntent.js"></script>
+  <script src="static/lib/superfish/superfish.min.js"></script>
+  <script src="static/lib/wow/wow.min.js"></script>
+  <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="static/lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="static/lib/sticky/sticky.js"></script>
+  <!-- Template Main Javascript File -->
+  <script src="static/js/main.js"></script>
+
+</body>
+</html>
