@@ -126,9 +126,7 @@
 
 
 
-        <!-- #contact -->
-
-
+            <!-- #contact -->
         <section class="u-align-center u-clearfix u-white u-section-4" id="sec-0b10">
           <div class="u-clearfix u-sheet u-sheet-1">
             <h3 class="u-text u-text-default u-text-1">Свяжитесь с нами</h3>
@@ -146,9 +144,16 @@
                   <label for="name-3b9a" class="u-label">Имя</label>
                   <input type="text" placeholder="Ваше имя" id="name-3b9a" name="name" class="u-input u-input-rectangle" required="">
                 </div>
-                <div class="u-form-email u-form-group u-label-none">
-                  <label for="email-3b9a" class="u-label">Email</label>
-                  <input type="email" placeholder="Почта для связи" id="email-3b9a" name="email" class="u-input u-input-rectangle" required="">
+                <div class="u-form-group u-form-select u-label-none">
+                  <label for="contact-type" class="u-label">Контактный способ</label>
+                  <select id="contact-type" name="contactType" class="u-input u-input-rectangle">
+                    <option value="email">Почта</option>
+                    <option value="phone">Телефон</option>
+                  </select>
+                </div>
+                <div class="u-form-group u-form-contact u-label-none">
+                  <label id="contact-label" for="contact-info" class="u-label">Email</label>
+                  <input type="text" placeholder="Почта для связи" id="contact-info" name="contactInfo" class="u-input u-input-rectangle" required="">
                 </div>
                 <div class="u-form-group u-form-select u-label-none u-form-group-3">
                   <label for="select-a9e2" class="u-label">Услуги</label>

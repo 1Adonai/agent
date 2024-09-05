@@ -17,10 +17,11 @@ var (
 )
 
 type ContactForm struct {
-	Name         string
-	Email        string
-	selectOption string
-	Message      string
+    Name         string
+    ContactType  string
+    ContactInfo  string
+    SelectOption string
+    Message      string
 }
 
 func main() {
@@ -124,45 +125,47 @@ func domHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func contactHandler(w http.ResponseWriter, r *http.Request) {
-	if r.Method == http.MethodPost {
-		log.Println("Received a POST request to /contact")
+    if r.Method == http.MethodPost {
+        log.Println("Received a POST request to /contact")
 
-		err := r.ParseForm()
-		if err != nil {
-			log.Printf("Error parsing form: %v", err)
-			http.Error(w, "Ошибка парсинга формы", http.StatusBadRequest)
-			return
-		}
+        err := r.ParseForm()
+        if err != nil {
+            log.Printf("Error parsing form: %v", err)
+            http.Error(w, "Ошибка парсинга формы", http.StatusBadRequest)
+            return
+        }
 
-		contactForm := ContactForm{
-			Name:         r.FormValue("name"),
-			Email:        r.FormValue("email"),
-			selectOption: r.FormValue("selectOption"),
-			Message:      r.FormValue("message"),
-		}
+        contactType := r.FormValue("contactType") // Тип контакта: email или phone
+        contactInfo := r.FormValue("contactInfo") // Контактные данные (email или телефон)
 
-		fmt.Println(contactForm.Name, contactForm.Email, contactForm.selectOption, contactForm.Message)
+        contactForm := ContactForm{
+            Name:         r.FormValue("name"),
+            ContactType:  contactType,
+            ContactInfo:  contactInfo,
+            SelectOption: r.FormValue("selectOption"),
+            Message:      r.FormValue("message"),
+        }
 
-		log.Printf("Parsed form: %+v", contactForm)
+        log.Printf("Parsed form: %+v", contactForm)
 
-		insertQuery := `INSERT INTO contacts (name, email, selectOption, message) VALUES (?, ?, ?, ?)`
-		_, err = db.Exec(insertQuery, contactForm.Name, contactForm.Email, contactForm.selectOption, contactForm.Message)
-		if err != nil {
-			log.Printf("Error inserting data into database: %v", err)
-			http.Error(w, "Ошибка вставки данных в базу", http.StatusInternalServerError)
-			return
-		}
+        insertQuery := `INSERT INTO contacts (name, contactType, contactInfo, selectOption, message) VALUES (?, ?, ?, ?, ?)`
+        _, err = db.Exec(insertQuery, contactForm.Name, contactForm.ContactType, contactForm.ContactInfo, contactForm.SelectOption, contactForm.Message)
+        if err != nil {
+            log.Printf("Error inserting data into database: %v", err)
+            http.Error(w, "Ошибка вставки данных в базу", http.StatusInternalServerError)
+            return
+        }
 
-		// Установка сообщения в сессию
-		session, _ := store.Get(r, "session-name")
-		session.Values["message"] = "Сообщение успешно отправлено! Мы скоро свяжемся с вами."
-		session.Save(r, w)
+        // Установка сообщения в сессию
+        session, _ := store.Get(r, "session-name")
+        session.Values["message"] = "Сообщение успешно отправлено! Мы скоро свяжемся с вами."
+        session.Save(r, w)
 
-		http.Redirect(w, r, "/", http.StatusSeeOther)
-	} else {
-		log.Printf("Unsupported request method: %s", r.Method)
-		http.Error(w, "Метод не поддерживается", http.StatusMethodNotAllowed)
-	}
+        http.Redirect(w, r, "/", http.StatusSeeOther)
+    } else {
+        log.Printf("Unsupported request method: %s", r.Method)
+        http.Error(w, "Метод не поддерживается", http.StatusMethodNotAllowed)
+    }
 }
 
 func initDB() {
@@ -176,7 +179,8 @@ func initDB() {
     CREATE TABLE IF NOT EXISTS contacts (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT,
-        email TEXT,
+        contactType TEXT, -- Тип контакта 
+        contactInfo TEXT, -- Сам контакт 
         selectOption TEXT,
         message TEXT
     );`

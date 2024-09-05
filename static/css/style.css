@@ -913,6 +913,51 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: 3px solid #50d8af;
 }
 
+/* Legal block 
+--------------------------------*/
+#legal-block {
+  background: #ffffff;
+  background-size: cover;
+  padding: 40px 0;
+}
+
+#legal-block .legal-title {
+  color: #0c2e8a;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#legal-block .legal-text {
+  color: #000000;
+}
+
+@media (min-width: 769px) {
+  #legal-block .cta-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+#legal-block .cta-btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 26px;
+  border-radius: 3px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 3px solid #fff;
+  color: #fff;
+}
+
+#legal-block .cta-btn:hover {
+  background: #50d8af;
+  border: 3px solid #50d8af;
+}
+
 
 /* Contact Section
 --------------------------------*/

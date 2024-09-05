@@ -31,10 +31,10 @@
 
 <body id="body">
 
-
   <!--==========================
     Header
   ============================-->
+
   <header id="header">
     <div class="container">
 
@@ -94,13 +94,13 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 about-img">
-            <img src="img/about-img.jpg" alt="">
+            <img src="static/img/main_car.jpg" alt="">
           </div>
 
           <div class="col-lg-6 content">
             <h2>Надежное страхование в Новосибирске уже 26 лет.</h2>
             <h3>Выбирайте страхование легко и удобно! Наша команда уже 26 лет помогает жителям Новосибирска находить оптимальные страховые решения.</h3>
-            <h3>Мы сотрудничаем с надежными страховыми компаниями, такими как Ресо-Гарантия и АльфаСтрахование, что позволяет нам предлагать самые выгодные условия. </h3>
+            <h3>Мы сотрудничаем с надежными страховыми компаниями, такими как Ресо-Гарантия, Ингосстрах и АльфаСтрахование, что позволяет нам предлагать самые выгодные условия. </h3>
             <h3>Оформите страховку онлайн или обратитесь к нашим специалистам за консультацией. Мы подберем для вас индивидуальную программу, которая полностью соответствует вашим потребностям. </h3>
           </div>
         </div>
@@ -157,6 +157,17 @@
       </div>
     </section><!-- #services -->
 
+    <section id="legal-block" class="wow fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="legal-title">Страхование юридических лиц.</h3>
+            <p class="legal-text">Обязательная страховка на автомобиль нужна не только физическим лицам. Если машина принадлежит юридическому лицу, на нее также нужно оформить полис ОСАГО.</p>
+        </div>
+      </div>
+    </section><!-- #call-to-action -->
+
+
     <section id="call-to-action" class="wow fadeInUp">
       <div class="container">
         <div class="row">
@@ -167,58 +178,62 @@
       </div>
     </section><!-- #call-to-action -->
 
-
         <!-- #contact -->
-
-
-        <section class="u-align-center u-clearfix u-white u-section-4" id="sec-0b10">
-          <div class="u-clearfix u-sheet u-sheet-1">
-            <h3 class="u-text u-text-default u-text-1">Свяжитесь с нами</h3>
-            <div class="u-form u-form-1">
-              <form
-                    id="contactForm"
-                    action="/contact"
-                    method="POST"
-                    class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
-                    style="padding: 10px"
-                    source="email"
-                    name="form"
-                >
-                <div class="u-form-group u-form-name u-label-none">
-                  <label for="name-3b9a" class="u-label">Имя</label>
-                  <input type="text" placeholder="Ваше имя" id="name-3b9a" name="name" class="u-input u-input-rectangle" required="">
-                </div>
-                <div class="u-form-email u-form-group u-label-none">
-                  <label for="email-3b9a" class="u-label">Email</label>
-                  <input type="email" placeholder="Почта для связи" id="email-3b9a" name="email" class="u-input u-input-rectangle" required="">
-                </div>
-                <div class="u-form-group u-form-select u-label-none u-form-group-3">
-                  <label for="select-a9e2" class="u-label">Услуги</label>
-                  <div class="u-form-select-wrapper">
-                    <select id="select-a9e2" name="selectOption" class="u-input u-input-rectangle">
-                      <option value="OSAGO" data-calc="OSAGO">ОСАГО</option>
-                      <option value="KASKO" data-calc="KASKO">КАСКО</option>
-                      <option data-calc="HOUSE" value="HOUSE">Квартира</option>
-                      <option data-calc="DOM" value="DOM">Дом, дача</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="u-form-group u-form-message u-label-none">
-                  <label for="message-3b9a" class="u-label">Message</label>
-                  <textarea placeholder="Вопросы или предложения (не обязательно)" rows="4" cols="50" id="message-3b9a" name="message" class="u-input u-input-rectangle" required=""></textarea>
-                </div>
-                <div class="u-align-left u-form-group u-form-submit">
-                  <button type="submit" class="u-btn u-btn-submit u-button-style u-custom-color-1 u-btn-1">Отправить</button>
-                </div>
-                <div id="successMessage" class="u-form-send-message u-form-send-success" style="display: none;">Спасибо! Ваше сообщение отправлено.</div>
-                <div id="errorMessage" class="u-form-send-error u-form-send-message" style="display: none;">Не удалось отправить сообщение. Пожалуйста, исправьте ошибки и попробуйте снова.</div>
-                <input type="hidden" value="" name="recaptchaResponse">
-                <input type="hidden" name="formServices" value="12d36e09-9e44-4f02-6891-f92ad772961e">
-              </form>
+    <section class="u-align-center u-clearfix u-white u-section-4" id="sec-0b10">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-text u-text-default u-text-1">Свяжитесь с нами</h3>
+        <div class="u-form u-form-1">
+          <form
+                id="contactForm"
+                action="/contact"
+                method="POST"
+                class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
+                style="padding: 10px"
+                source="email"
+                name="form"
+            >
+            <div class="u-form-group u-form-name u-label-none">
+              <label for="name-3b9a" class="u-label">Имя</label>
+              <input type="text" placeholder="Ваше имя" id="name-3b9a" name="name" class="u-input u-input-rectangle" required="">
             </div>
-          </div>
-        </section>
-      </main>
+            <div class="u-form-group u-form-select u-label-none">
+              <label for="contact-type" class="u-label">Контактный способ</label>
+              <select id="contact-type" name="contactType" class="u-input u-input-rectangle">
+                <option value="email">Почта</option>
+                <option value="phone">Телефон</option>
+              </select>
+            </div>
+            <div class="u-form-group u-form-contact u-label-none">
+              <label id="contact-label" for="contact-info" class="u-label">Email</label>
+              <input type="text" placeholder="Почта для связи" id="contact-info" name="contactInfo" class="u-input u-input-rectangle" required="">
+            </div>
+            <div class="u-form-group u-form-select u-label-none u-form-group-3">
+              <label for="select-a9e2" class="u-label">Услуги</label>
+              <div class="u-form-select-wrapper">
+                <select id="select-a9e2" name="selectOption" class="u-input u-input-rectangle">
+                  <option value="OSAGO" data-calc="OSAGO">ОСАГО</option>
+                  <option value="KASKO" data-calc="KASKO">КАСКО</option>
+                  <option data-calc="HOUSE" value="HOUSE">Квартира</option>
+                  <option data-calc="DOM" value="DOM">Дом, дача</option>
+                </select>
+              </div>
+            </div>
+            <div class="u-form-group u-form-message u-label-none">
+              <label for="message-3b9a" class="u-label">Message</label>
+              <textarea placeholder="Вопросы или предложения (не обязательно)" rows="4" cols="50" id="message-3b9a" name="message" class="u-input u-input-rectangle" required=""></textarea>
+            </div>
+            <div class="u-align-left u-form-group u-form-submit">
+              <button type="submit" class="u-btn u-btn-submit u-button-style u-custom-color-1 u-btn-1">Отправить</button>
+            </div>
+            <div id="successMessage" class="u-form-send-message u-form-send-success" style="display: none;">Спасибо! Ваше сообщение отправлено.</div>
+            <div id="errorMessage" class="u-form-send-error u-form-send-message" style="display: none;">Не удалось отправить сообщение. Пожалуйста, исправьте ошибки и попробуйте снова.</div>
+            <input type="hidden" value="" name="recaptchaResponse">
+            <input type="hidden" name="formServices" value="12d36e09-9e44-4f02-6891-f92ad772961e">
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
     <!--==========================
       Contact Section
     ============================-->
@@ -235,7 +250,7 @@
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
               <h3>Адрес</h3>
-              <address>Кольцово</address>
+              <address>Новосибирск, Новосибирская обл.</address>
             </div>
           </div>
 
