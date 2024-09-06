@@ -69,7 +69,6 @@ jQuery(document).ready(function( $ ) {
     return phonePattern.test(phone);
   }
 
-    // Back to top button functionality
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
@@ -95,10 +94,8 @@ jQuery(document).ready(function( $ ) {
     return false;
   });
 
-  // Stick the header at top on scroll
   $("#header").sticky({topSpacing:0, zIndex: '50'});
 
-  // Intro background carousel
   $("#intro-carousel").owlCarousel({
     autoplay: true,
     dots: false,
@@ -107,10 +104,8 @@ jQuery(document).ready(function( $ ) {
     items: 1
   });
 
-  // Initiate the wowjs animation library
   new WOW().init();
 $(document).ready(function() {
-  // Инициализируем superfish на навигации
   $('.nav-menu').superfish({
     animation: {
       opacity: 'show'
@@ -118,20 +113,16 @@ $(document).ready(function() {
     speed: 400
   });
 
-  // Убираем класс menu-active со всех ссылок
   $('.nav-menu li').removeClass('menu-active');
 
-  // Получаем текущий путь URL
   var path = window.location.pathname;
 
-  // Ищем ссылку, которая совпадает с текущим URL, и добавляем класс menu-active
   $('.nav-menu li a').each(function() {
     if ($(this).attr('href') === path) {
       $(this).parent().addClass('menu-active');
     }
   });
 
-  // Оставляем анимации для мобильного меню
   if ($('#mobile-nav').length) {
     $('#mobile-nav').find('.menu-has-children').prepend('<i class="fa fa-chevron-down"></i>');
     $(document).on('click', '.menu-has-children i', function(e) {
